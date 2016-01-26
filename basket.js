@@ -18,7 +18,7 @@ var myShoppingBasket = {
     discount: 'BoGoF'
   },
   { item: 'Cinnamon Sticks',
-    cost: 0.75,
+    cost: 5.75,
     discount: 'None'
   }],
   totalCost: function(){
@@ -28,7 +28,14 @@ var myShoppingBasket = {
       this.price = this.price + cost;
       }
     },
-  
+  //10% discount for all shopping baskets over £20
+  twentyDiscount: function(){
+    if(this.price > 20){
+      this.price = this.price - (this.price / 10 * 2);
+    }else{
+      this.price;
+    }
+  }
   }
 
 
