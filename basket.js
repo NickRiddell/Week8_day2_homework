@@ -31,7 +31,7 @@ var myShoppingBasket = {
   //10% discount for all shopping baskets over £20
   twentyDiscount: function(){
     if(this.price > 20){
-      this.price = this.price - (this.price / 10 * 2);
+      this.price = this.price - (this.price / 10);
     }else{
       this.price;
     }
@@ -47,8 +47,7 @@ var myShoppingBasket = {
         bogofItems.push(title);
       }
     }
-    var sorted_bogofItems = bogofItems.sort(); 
-
+    var sorted_bogofItems = bogofItems.sort();
     }
   }
 
