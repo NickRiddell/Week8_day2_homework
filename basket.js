@@ -35,7 +35,21 @@ var myShoppingBasket = {
     }else{
       this.price;
     }
-  }
+  },
+  //Certain items are buy one get on free, this should be considered.
+  bOGOF: function(){
+    for (var i = 0; i < items.length; i++) {
+      var product = this.items[i];
+      var title = product.item;
+      var discount = product.discount;
+      var bogofItems = [];
+      if (discount === 'BoGoF'){
+        bogofItems.push(title);
+      }
+    }
+    var sorted_bogofItems = bogofItems.sort(); 
+
+    }
   }
 
 
